@@ -6,8 +6,8 @@
   "author": "Eraldo Sinicio",
   "license": "MIT",
   "scripts": {
-    "local": "NODE_ENV=local babel-watch --watch ./src ./src/index.js",
-    "production": "NODE_ENV=production babel-watch --watch ./src ./src/index.js"
+    "local": "NODE_ENV=local babel-watch --watch ./src ./src/infra/http/server.js",
+    "production": "NODE_ENV=production babel-watch --watch ./src ./src/infra/http/server.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.26.4",
@@ -24,6 +24,7 @@
     "prettier": "^3.4.2"
   },
   "dependencies": {
+    "@koa/router": "^13.1.0",
     "koa": "^2.15.3"
   }
 }
