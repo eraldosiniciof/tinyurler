@@ -1,0 +1,8 @@
+{
+  "name": "tinyurler",
+  "version": "1.0.0",
+  "description": "Encurtador de URLs",
+  "main": "index.js",
+  "author": "Eraldo Sinicio",
+  "license": "MIT"
+}
