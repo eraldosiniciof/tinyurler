@@ -5,12 +5,25 @@
   "main": "index.js",
   "author": "Eraldo Sinicio",
   "license": "MIT",
+  "scripts": {
+    "local": "NODE_ENV=local babel-watch --watch ./src ./src/index.js",
+    "production": "NODE_ENV=production babel-watch --watch ./src ./src/index.js"
+  },
   "devDependencies": {
+    "@babel/cli": "^7.26.4",
+    "@babel/core": "^7.26.0",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.26.0",
     "@eslint/js": "^9.17.0",
+    "babel-watch": "^7.8.1",
+    "dotenv": "^16.4.7",
     "eslint": "^9.17.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "globals": "^15.14.0",
     "prettier": "^3.4.2"
+  },
+  "dependencies": {
+    "koa": "^2.15.3"
   }
 }
