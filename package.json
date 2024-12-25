@@ -7,7 +7,9 @@
   "license": "MIT",
   "scripts": {
     "local": "NODE_ENV=local babel-watch --watch ./src ./src/infra/http/server.js",
-    "production": "NODE_ENV=production babel-watch --watch ./src ./src/infra/http/server.js"
+    "production": "NODE_ENV=production babel-watch --watch ./src ./src/infra/http/server.js",
+    "migrate:local": "NODE_ENV=local knex migrate:latest --knexfile src/infra/knex/index.js",
+    "rollback:local": "NODE_ENV=local knex migrate:rollback --knexfile src/infra/knex/index.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.26.4",
@@ -25,6 +27,8 @@
   },
   "dependencies": {
     "@koa/router": "^13.1.0",
-    "koa": "^2.15.3"
+    "knex": "^3.1.0",
+    "koa": "^2.15.3",
+    "pg": "^8.13.1"
   }
 }
