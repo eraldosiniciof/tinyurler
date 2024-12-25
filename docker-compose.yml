@@ -1,0 +1,10 @@
+services:
+  dev_mission:
+    container_name: dev_tinyurler
+    image: postgres:14.4
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=010101
+      - POSTGRES_DB=dev_tinyurler
