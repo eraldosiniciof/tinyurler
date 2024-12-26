@@ -23,8 +23,7 @@ describe('GenerateShortedUrlProvider', () => {
   it('should generate a string with a random number of characters (between 5 and 10)', async () => {
     const result = await generateShortedUrlProvider.execute()
 
-    const randomNumber = Math.floor(Math.random() * 10)
-    const expectedLength = randomNumber >= 5 ? randomNumber : 5
-    expect(result.length).toBeGreaterThanOrEqual(expectedLength)
+    expect(result.length).toBeGreaterThanOrEqual(5)
+    expect(result.length).toBeLessThanOrEqual(10)
   })
 })
