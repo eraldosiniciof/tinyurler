@@ -1,7 +1,9 @@
 import dayjs from 'dayjs'
 
 import { UrlsRepository } from '@modules/urls/infra/repositories/UrlsRepositorys'
+import { errorsMessages } from 'infra/http/errors/messages'
 
+const { SHORT_EXPIRED, SHORT_NOT_FOUND } = errorsMessages
 class GetShortenedUrlService {
   constructor(urlsRepository = new UrlsRepository(), expiresMinutes = process.env.EXPIRES_MINUTES) {
     this.urlsRepository = urlsRepository
@@ -14,14 +16,14 @@ class GetShortenedUrlService {
     const short = await this.urlsRepository.findByShort(params.short)
 
     if (short.length === 0) {
-      throw new Error('Short not found')
+      throw new Error(SHORT_NOT_FOUND)
     }
 
     const expiresAt = dayjs(short[0].expires_at)
     const diffMinutes = now.diff(expiresAt, 'minute')
 
     if (diffMinutes > this.expiresMinutes) {
-      throw new Error('Short expired')
+      throw new Error(SHORT_EXPIRED)
     }
 
     return short[0].original
