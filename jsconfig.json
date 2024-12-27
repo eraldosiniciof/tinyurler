@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@config/*": ["infra/config/*"],
+      "@modules/*": ["modules/*"],
+      "@knex/*": ["infra/knex/*"],
+      "@providers/*": ["providers/*"]
+    }
+  },
+  "include": ["src/**/*"]
+}
