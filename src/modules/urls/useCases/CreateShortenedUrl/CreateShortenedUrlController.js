@@ -28,8 +28,7 @@ class CreateShortenedUrlController {
       ctx.status = 201
       ctx.body = result
     } catch (error) {
-      ctx.status = 500
-      ctx.body = { message: error.message }
+      throw error
     }
   }
 }
