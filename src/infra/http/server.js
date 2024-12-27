@@ -1,7 +1,9 @@
 import '@babel/polyfill'
 import Koa from 'koa'
+
+import { ENV_NAME, SERVER_PORT } from '@config/index'
+
 import { RouterApp } from './route'
-import { ENV_NAME, SERVER_PORT } from '../config'
 
 const app = new Koa()
 

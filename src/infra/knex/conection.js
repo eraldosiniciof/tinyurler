@@ -1,4 +1,7 @@
-const config = require('./')
-const { ENV_NAME } = require('../config')
+const knexInstance = require('knex')
 
-export const knex = require('knex')(config[ENV_NAME])
+const { ENV_NAME } = require('@config/index')
+
+const config = require('./')
+
+export const knex = knexInstance(config[ENV_NAME])

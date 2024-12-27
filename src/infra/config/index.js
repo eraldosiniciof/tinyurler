@@ -1,5 +1,5 @@
-const path = require('path')
 const dotenv = require('dotenv')
+const path = require('path')
 
 const ENV_NAME = process.env.NODE_ENV
 

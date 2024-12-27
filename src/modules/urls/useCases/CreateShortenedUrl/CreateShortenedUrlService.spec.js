@@ -1,4 +1,3 @@
-import dayjs from 'dayjs'
 import { CreateShortenedUrlService } from './CreateShortenedUrlService'
 
 describe('CreateShortenedUrlService', () => {
@@ -15,7 +14,11 @@ describe('CreateShortenedUrlService', () => {
   }
 
   it('created shorted url', async () => {
-    const createShortenedUrlService = new CreateShortenedUrlService(fakeUrlsRepository, fakeGenerateShortedUrlProvider, 1)
+    const createShortenedUrlService = new CreateShortenedUrlService(
+      fakeUrlsRepository,
+      fakeGenerateShortedUrlProvider,
+      1
+    )
 
     fakeGenerateShortedUrlProvider.execute.mockResolvedValue('tEst01')
 

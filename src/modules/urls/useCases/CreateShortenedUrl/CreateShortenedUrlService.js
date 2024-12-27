@@ -1,10 +1,14 @@
 import dayjs from 'dayjs'
 
-import { UrlsRepository } from '../../infra/repositories/UrlsRepositorys'
-import { GenerateShortedUrlProvider } from '../../../../providers/GenerateShortedUrl/GenerateShortedUrlProvider'
+import { GenerateShortedUrlProvider } from '@providers/GenerateShortedUrl/GenerateShortedUrlProvider'
+
+import { UrlsRepository } from '@modules/urls/infra/repositories/UrlsRepositorys'
 
 class CreateShortenedUrlService {
-  constructor(urlsRepository = new UrlsRepository(), generateShortedUrlProvider = new GenerateShortedUrlProvider()) {
+  constructor(
+    urlsRepository = new UrlsRepository(),
+    generateShortedUrlProvider = new GenerateShortedUrlProvider()
+  ) {
     this.urlsRepository = urlsRepository
     this.generateShortedUrlProvider = generateShortedUrlProvider
     this.expiresMinutes = process.env.EXPIRES_MINUTES

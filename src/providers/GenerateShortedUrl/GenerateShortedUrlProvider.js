@@ -9,7 +9,10 @@ class GenerateShortedUrlProvider {
 
     const shorted = []
     for (let i = 0; i < totalToGenerate; i += 1) {
-      const numberAndLetter = [randomNumber(10), upperOrLower(alphabetic[randomNumber(26)])[randomNumber(2)]]
+      const numberAndLetter = [
+        randomNumber(10),
+        upperOrLower(alphabetic[randomNumber(26)])[randomNumber(2)]
+      ]
       shorted.push(numberAndLetter[randomNumber(2)])
     }
 
