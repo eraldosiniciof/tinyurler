@@ -16,6 +16,7 @@ export default [
   },
   pluginJs.configs.recommended,
   {
+    ignorePatterns: ['node_modules/'],
     plugins: {
       jest: jestPlugin,
       prettier: prettierPlugin,
