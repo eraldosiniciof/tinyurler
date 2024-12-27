@@ -1,0 +1,94 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2024-12-27T18:08:42.378Z",
+  "__export_source": "insomnia.desktop.app:v9.3.3",
+  "resources": [
+    {
+      "_id": "req_b656750ead8641d9bed5264c92ecd581",
+      "parentId": "wrk_d7f2f02b7f0944b5b1fc37e5542bd769",
+      "modified": 1735322729178,
+      "created": 1735065565449,
+      "url": "{{ _.BASE_URL }}/k5569",
+      "name": "Acessar URL Original pela Encurtada",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [{ "name": "User-Agent", "value": "insomnia/9.3.3" }],
+      "authentication": {},
+      "metaSortKey": -1735065565449,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "wrk_d7f2f02b7f0944b5b1fc37e5542bd769",
+      "parentId": null,
+      "modified": 1735065528932,
+      "created": 1735065528932,
+      "name": "API",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_42e7defdcc4d40799589cf1ed7719bec",
+      "parentId": "wrk_d7f2f02b7f0944b5b1fc37e5542bd769",
+      "modified": 1735322717707,
+      "created": 1735068372524,
+      "url": "{{ _.BASE_URL }}",
+      "name": "Criar URL Encurtada",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"original\": \"http://google.com\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" },
+        { "name": "User-Agent", "value": "insomnia/9.3.3" }
+      ],
+      "authentication": {},
+      "metaSortKey": -1734761017405,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_08a1e45e01e47bd84eae00f2bbc7e351756ab67c",
+      "parentId": "wrk_d7f2f02b7f0944b5b1fc37e5542bd769",
+      "modified": 1735225115561,
+      "created": 1735065528933,
+      "name": "Base Environment",
+      "data": { "BASE_URL": "http://localhost:8080" },
+      "dataPropertyOrder": { "&": ["BASE_URL"] },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1735065528933,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_08a1e45e01e47bd84eae00f2bbc7e351756ab67c",
+      "parentId": "wrk_d7f2f02b7f0944b5b1fc37e5542bd769",
+      "modified": 1735065528934,
+      "created": 1735065528934,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    }
+  ]
+}
