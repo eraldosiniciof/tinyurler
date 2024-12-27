@@ -1,5 +1,6 @@
 import Router from '@koa/router'
-import { createShortenedUrlFactory } from '../../../useCases/CreateShortenedUrl/CreateShortenedUrlFactory'
+
+import { createShortenedUrlFactory } from '@modules/urls/useCases/CreateShortenedUrl/CreateShortenedUrlFactory'
 
 const urlsRoutes = new Router({
   prefix: '/shorten'

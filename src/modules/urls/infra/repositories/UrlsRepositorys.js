@@ -1,4 +1,4 @@
-import { knex } from '../../../../infra/knex/conection'
+import { knex } from '@knex/conection'
 
 const REPOSITORY = 'urls'
 
