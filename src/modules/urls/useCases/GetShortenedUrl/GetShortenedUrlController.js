@@ -14,8 +14,7 @@ class GetShortenedUrlController {
 
       ctx.redirect(result)
     } catch (error) {
-      ctx.status = 500
-      ctx.body = { message: error.message }
+      throw error
     }
   }
 }
