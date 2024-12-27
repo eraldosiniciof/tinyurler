@@ -32,3 +32,7 @@ Projeto realizado para praticar algumas skills no desenvolvimento de api's.
     - Irá redirecionar, para a url original, a partir da url encurtada enviada no parâmetro
 - Observação: A coleção de requisições está na raiz do projeto
   - O Insomnia foi o software utilizado
+
+#### Documentação Swagger
+
+- Acessar endpoint `/docs`
