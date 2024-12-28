@@ -1,6 +1,6 @@
 const path = require('path')
 
-const { DATABASE, ENV_NAME } = require('@config/index')
+const { DATABASE, ENV_NAME } = require('../config/index')
 
 module.exports = {
   [ENV_NAME]: {
